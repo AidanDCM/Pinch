@@ -1,0 +1,20 @@
+{
+  "name": "pinch",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node --test --experimental-strip-types packages/pricing-engine/test/*.test.ts",
+    "test:pricing": "node --test --experimental-strip-types packages/pricing-engine/test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
